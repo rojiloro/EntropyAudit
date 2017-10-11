@@ -29,3 +29,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 
+- Per-rule rationale text in the report, so every finding explains itself.
+- A `--strict` mode that turns low-confidence patterns into findings.
+
+## [0.7.0] - 2023-10-17
+
