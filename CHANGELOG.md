@@ -25,3 +25,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - `docs/FORMAT.md` as the written contract for findings and the report keys.
 - Deterministic JSON report with a fixed key order.
 
+## [0.9.0] - 2024-09-10
+
+### Added
+
