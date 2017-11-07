@@ -44,3 +44,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Added
 
 - EA005: fixed salt used for key derivation or hashing.
+- JSON report: `report --format json` with stable key order.
+
+## [0.5.0] - 2021-09-14
+
