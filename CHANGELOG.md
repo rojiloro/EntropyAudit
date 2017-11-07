@@ -39,3 +39,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - EA006: weak hash used for password handling.
 - Line and column numbers on every finding.
 
+## [0.6.0] - 2022-11-29
+
+### Added
+
+- EA005: fixed salt used for key derivation or hashing.
