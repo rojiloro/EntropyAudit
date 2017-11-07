@@ -48,3 +48,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [0.5.0] - 2021-09-14
 
+### Added
+
+- EA004: reused nonce or IV bound to a constant.
+- The context pass that separates security-relevant paths from utility code.
+
