@@ -58,3 +58,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Added
 
 - EA003: generator seeded from wall-clock time.
+- A worked scan over the bundled vulnerable sample.
+
+## [0.3.0] - 2019-11-05
+
+### Added
