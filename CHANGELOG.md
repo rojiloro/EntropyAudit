@@ -53,3 +53,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - EA004: reused nonce or IV bound to a constant.
 - The context pass that separates security-relevant paths from utility code.
 
+## [0.4.0] - 2020-10-20
+
+### Added
+
+- EA003: generator seeded from wall-clock time.
