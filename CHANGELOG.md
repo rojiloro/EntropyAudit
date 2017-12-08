@@ -63,3 +63,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [0.3.0] - 2019-11-05
 
 ### Added
+
+- EA002: random module used on a security-relevant path.
+- The findings-by-class summary in the report.
+
