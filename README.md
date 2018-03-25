@@ -94,3 +94,15 @@ sorted, deterministic order and every `.py` file under it is scanned.
 | `version` | none        | The package version string.                                    |
 
 ## The rule set
+
+Six rules, EA001 through EA006. Each entry below states what the rule matches in
+the AST, the CWE class it maps to, why the pattern is exploitable, and a short
+before and after pair. The severity and CWE mapping come from `patterns.py`; the
+rationale text comes from `rationale.py`.
+
+### EA001: predictable seed passed to a random generator
+
+Matches `random.seed(<constant>)` or `Random(<constant>)` where the argument is
+a literal constant. Class: Use of Insufficiently Random Values, CWE-330,
+severity high.
+
