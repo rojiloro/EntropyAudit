@@ -245,3 +245,15 @@ The `samples/` directory holds two hand authored test vectors:
 and once for a fixed nonce), and `clean_auth.py`, built to do the same work
 correctly and produce nothing.
 
+The following was captured by running the command shown against `samples/` in
+this repository. It is pasted verbatim.
+
+```
+$ python -m entropyaudit report samples
+entropyaudit report for samples
+===============================
+
+findings by class:
+      1  Predictable Seed in PRNG
+      2  Reusing a Nonce or Key Pair in Encryption
+      1  Use of Cryptographically Weak PRNG
