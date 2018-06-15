@@ -5,3 +5,5 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "entropyaudit"
 version = "1.0.1"
+description = "Static auditor for randomness and nonce hygiene in Python source."
+readme = "README.md"
