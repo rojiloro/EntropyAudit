@@ -19,3 +19,5 @@ classifiers = [
 
 [project.scripts]
 entropyaudit = "entropyaudit.cli:main"
+
+[tool.setuptools.packages.find]
