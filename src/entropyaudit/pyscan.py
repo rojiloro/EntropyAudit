@@ -66,3 +66,18 @@ class _ImportInfo:
     imported_modules: set = field(default_factory=set)
 
 
+def scan_source(source: str, path: str) -> list[Finding]:
+    """Parse source and return findings for the given display path.
+
+    A file that fails to parse yields no findings; the caller is told through
+    the returned parse error channel in scan_file.
+    """
+    tree = ast.parse(source)
+    imports = _collect_imports(tree)
+    visitor = _Visitor(path=path, imports=imports)
+    visitor.visit(tree)
+    findings = visitor.findings
+    findings.sort(key=lambda f: f.sort_key())
+    return findings
+
+
