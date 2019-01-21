@@ -81,3 +81,18 @@ def scan_source(source: str, path: str) -> list[Finding]:
     return findings
 
 
+def scan_file(path: str) -> tuple[list[Finding], str | None]:
+    """Scan a file on disk.
+
+    Returns (findings, error). error is None on success, otherwise a short
+    message describing why the file could not be scanned.
+    """
+    try:
+        with open(path, "r", encoding="utf-8") as handle:
+            source = handle.read()
+    except OSError as exc:
+        return [], f"cannot read: {exc.strerror or exc}"
+    try:
+        findings = scan_source(source, path)
+    except SyntaxError as exc:
+        return [], f"syntax error at line {exc.lineno}"
