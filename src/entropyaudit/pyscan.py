@@ -112,3 +112,18 @@ def _collect_imports(tree: ast.AST) -> _ImportInfo:
             if module:
                 info.imported_modules.add(module)
             for alias in node.names:
+                local = alias.asname or alias.name
+                info.name_aliases[local] = f"{module}.{alias.name}" if module else alias.name
+    return info
+
+
+def _dotted_name(node: ast.AST) -> str | None:
+    """Return a dotted name for an attribute or name node, else None."""
+    parts = []
+    current = node
+    while isinstance(current, ast.Attribute):
+        parts.append(current.attr)
+        current = current.value
+    if isinstance(current, ast.Name):
+        parts.append(current.id)
+        return ".".join(reversed(parts))
