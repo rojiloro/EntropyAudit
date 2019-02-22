@@ -158,3 +158,18 @@ class _Visitor(ast.NodeVisitor):
         try:
             return ast.unparse(node)
         except Exception:
+            return ""
+
+    def _resolves_to_random(self, func: ast.AST) -> str | None:
+        """If func is a call into the random module, return the callable name.
+
+        Handles: import random; random.random(), the aliased form, and
+        from random import randint style names. Returns the leaf callable name
+        (for example "randint") or None.
+        """
+        dotted = _dotted_name(func)
+        if dotted is None:
+            return None
+        head, _, leaf = dotted.rpartition(".")
+        if head:
+            canonical = self.imports.module_aliases.get(head, head)
