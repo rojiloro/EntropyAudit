@@ -173,3 +173,18 @@ class _Visitor(ast.NodeVisitor):
         head, _, leaf = dotted.rpartition(".")
         if head:
             canonical = self.imports.module_aliases.get(head, head)
+            if canonical.split(".")[0] == "random" and leaf in RANDOM_CALLABLES:
+                return leaf
+            # random.Random().method style is covered by the constructor check.
+        else:
+            # bare name imported via "from random import randint"
+            origin = self.imports.name_aliases.get(dotted)
+            if origin and origin.split(".")[0] == "random":
+                leaf_name = origin.split(".")[-1]
+                if leaf_name in RANDOM_CALLABLES:
+                    return leaf_name
+        return None
+
+    def _resolves_to_random_seed(self, func: ast.AST) -> bool:
+        dotted = _dotted_name(func)
+        if dotted is None:
