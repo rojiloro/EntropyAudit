@@ -250,3 +250,18 @@ class _Visitor(ast.NodeVisitor):
         self.generic_visit(node)
 
     def _check_seed(self, node: ast.Call) -> None:
+        is_seed = self._resolves_to_random_seed(node.func)
+        is_ctor = self._resolves_to_random_ctor(node.func)
+        if not (is_seed or is_ctor):
+            return
+        if not node.args:
+            return
+        arg = node.args[0]
+        # EA003 time-seeded generator takes precedence over the generic
+        # predictable seed rule because the exploit path is different.
+        if self._is_time_call(arg):
+            self._add("EA003", node)
+        elif isinstance(arg, ast.Constant):
+            self._add("EA001", node)
+
+    def _check_weak_prng(self, node: ast.Call) -> None:
