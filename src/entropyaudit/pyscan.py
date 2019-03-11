@@ -280,3 +280,19 @@ class _Visitor(ast.NodeVisitor):
 
     def _enclosing_name_is_security(self, node: ast.Call) -> bool:
         names = getattr(node, "_ea_target_names", None)
+        if not names:
+            return False
+        return context.any_identifier_security_relevant(names)
+
+    def _check_weak_hash(self, node: ast.Call) -> None:
+        name = self._hashlib_call_name(node.func)
+        algo = None
+        if name == "new" and node.args and isinstance(node.args[0], ast.Constant):
+            value = node.args[0].value
+            if isinstance(value, str):
+                algo = value.lower()
+        elif name is not None and name.lower() in WEAK_HASHES:
+            algo = name.lower()
+        if algo is None or algo not in WEAK_HASHES:
+            return
+        # Only flag as password handling when a password-like name is in scope
