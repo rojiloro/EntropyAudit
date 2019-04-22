@@ -31,3 +31,7 @@ RATIONALE = {
         "values across a plausible window, so an attacker can brute force the "
         "seed offline and reconstruct every generated value. Do not seed "
         "security generators from time."
+    ),
+    "EA004": (
+        "A nonce or initialization vector bound to a constant repeats on every "
+        "encryption. For stream ciphers and counter modes, reusing a nonce with "
