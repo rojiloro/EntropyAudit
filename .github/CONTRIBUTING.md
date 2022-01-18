@@ -6,3 +6,6 @@ the code it reads.
 
 ## Development setup
 
+- Python 3.11+. The package uses the standard library only.
+
+```bash
