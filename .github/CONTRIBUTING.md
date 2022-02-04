@@ -12,3 +12,6 @@ the code it reads.
 python -m compileall -q src
 python -m pytest -q
 PYTHONPATH=src python -m entropyaudit --help
+```
+
+## Before you open a pull request
