@@ -13,3 +13,6 @@ assignees: ""
 **Reproduce**
 
 Smallest file or snippet that triggers it, plus the command:
+
+```bash
+PYTHONPATH=src python -m {module} --help
