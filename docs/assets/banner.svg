@@ -14,3 +14,7 @@
     <path d="M0 65 H960 M0 130 H960 M0 195 H960 M240 0 V260 M480 0 V260 M720 0 V260"/>
   </g>
   <text x="48" y="92" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="40" font-weight="700" fill="#f7f2e9">EntropyAudit</text>
+  <text x="48" y="122" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" fill="#b8a888">randomness bugs that survive review: seeds, nonces, salts and weak hashes</text>
+  <g transform="translate(48 150)">
+    <g font-family="Consolas, Menlo, monospace" font-size="12">
+      <rect x="0" y="0" width="34" height="34" rx="6" fill="#24201a" stroke="#4a4132"/>
