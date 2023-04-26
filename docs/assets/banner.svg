@@ -27,3 +27,7 @@
       <text x="0" y="58" fill="#8f8064">EA001..EA006</text>
     </g>
     <rect x="230" y="0" width="120" height="56" rx="8" fill="#241f16" stroke="#5a4a2e"/>
+    <text x="290" y="24" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#b8a888" text-anchor="middle">findings</text>
+    <text x="290" y="46" font-family="Consolas, Menlo, monospace" font-size="15" fill="#f0e6cf" text-anchor="middle">4 classes</text>
+  </g>
+  <g transform="translate(560 60)">
