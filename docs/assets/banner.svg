@@ -23,3 +23,7 @@
       <text x="61" y="22" fill="#e6dcc4" text-anchor="middle">?</text>
       <rect x="88" y="0" width="34" height="34" rx="6" fill="#24201a" stroke="#4a4132"/>
       <text x="105" y="22" fill="#e6dcc4" text-anchor="middle">?</text>
+      <text x="136" y="22" fill="#e0a944">seed(42)</text>
+      <text x="0" y="58" fill="#8f8064">EA001..EA006</text>
+    </g>
+    <rect x="230" y="0" width="120" height="56" rx="8" fill="#241f16" stroke="#5a4a2e"/>
