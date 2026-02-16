@@ -31,3 +31,11 @@
     <text x="290" y="46" font-family="Consolas, Menlo, monospace" font-size="15" fill="#f0e6cf" text-anchor="middle">4 classes</text>
   </g>
   <g transform="translate(560 60)">
+    <text x="0" y="0" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#9c8b6c">rules</text>
+    <text x="0" y="24" font-family="Consolas, Menlo, monospace" font-size="14" fill="#efe6d2">seeded generator | wall clock seed</text>
+    <text x="0" y="46" font-family="Consolas, Menlo, monospace" font-size="14" fill="#efe6d2">constant nonce | fixed salt | weak hash</text>
+    <text x="0" y="74" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="13" fill="#9c8b6c">exit codes</text>
+    <text x="0" y="98" font-family="Consolas, Menlo, monospace" font-size="14" fill="#efe6d2">0 clean | 1 findings | 2 usage</text>
+  </g>
+  <text x="48" y="248" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12" fill="#6e634c">offline | standard library only | python 3.11+</text>
+</svg>
