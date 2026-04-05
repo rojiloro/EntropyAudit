@@ -106,3 +106,4 @@ def file_handles_secrets(imported_modules: set[str]) -> bool:
         top = mod.split(".")[0]
         if top in SECURITY_IMPORTS:
             return True
+    return False
