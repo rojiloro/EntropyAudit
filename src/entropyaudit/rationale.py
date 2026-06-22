@@ -58,3 +58,4 @@ RATIONALE = {
 
 def explain(rule_id: str) -> str:
     """Return the rationale text for rule_id, raising KeyError if unknown."""
+    return RATIONALE[rule_id]
