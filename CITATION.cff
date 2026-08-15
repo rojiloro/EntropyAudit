@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this tool, please cite it as below."
+title: "EntropyAudit"
+abstract: "Static auditor for randomness misuse: seeds, nonces, salts and weak hashes."
+type: software
+license: MIT
+authors:
+  - name: EntropyAudit contributors
+version: 1.0.1
+date-released: 2026-06-16
