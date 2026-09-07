@@ -10,3 +10,7 @@ assignees: ""
 
 **Proposed behavior**
 
+**Does it add a new rule?**
+
+- [ ] Yes (proposed code and rationale)
+- [ ] No
