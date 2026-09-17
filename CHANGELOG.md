@@ -67,3 +67,15 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - EA002: random module used on a security-relevant path.
 - The findings-by-class summary in the report.
 
+## [0.2.0] - 2018-09-25
+
+### Added
+
+- EA001: predictable seed passed to a random generator.
+- AST based scanner with a rule registry.
+
+## [0.1.0] - 2017-11-14
+
+### Added
+
+- First release: file walker and a line oriented report with a findings total.
