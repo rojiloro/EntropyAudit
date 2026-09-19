@@ -15,3 +15,8 @@ PYTHONPATH=src python -m entropyaudit --help
 ```
 
 ## Before you open a pull request
+
+1. Compile and the full test suite must pass.
+2. Every new rule needs: a code, a pattern in the rule registry, a written
+   rationale, a fixture and a test.
+3. Keep the package dependency-free.
