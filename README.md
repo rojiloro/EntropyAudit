@@ -95,6 +95,9 @@ sorted, deterministic order and every `.py` file under it is scanned.
 
 ## The rule set
 
+Every rule ships with a written rationale, so a finding can be argued
+with rather than just obeyed. A rule without a rationale is a bug report waiting to happen.
+
 Six rules, EA001 through EA006. Each entry below states what the rule matches in
 the AST, the CWE class it maps to, why the pattern is exploitable, and a short
 before and after pair. The severity and CWE mapping come from `patterns.py`; the
