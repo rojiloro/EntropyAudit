@@ -134,6 +134,9 @@ session_token = secrets.token_hex(16)      # after (import secrets)
 
 ### EA003: generator seeded from wall-clock time
 
+A wall-clock seed is reproducible
+only by accident. The finding names the call site and suggests an explicit seed source, because the fix is a decision the author has to make.
+
 Matches `random.seed(time.time())` or seeding from any `time.*` call. This rule
 takes precedence over EA001 because the exploit path is different: the seed is
 not a fixed literal but a small, guessable window. Class: Predictable Seed in
