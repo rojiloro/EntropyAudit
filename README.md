@@ -86,6 +86,9 @@ works once the package is on the path.
 
 ## Commands
 
+The commands are read-only by design: scan, report, and version.
+Nothing here rewrites source, so it is safe to run over a checkout you do not own.
+
 Four subcommands. Each takes a file or a directory; a directory is walked in
 sorted, deterministic order and every `.py` file under it is scanned.
 
