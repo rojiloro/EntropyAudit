@@ -34,6 +34,9 @@ why a pattern is dangerous instead of listing bare codes.
 
 ## Why randomness bugs survive review
 
+Randomness misuse compiles, runs, and passes
+tests: a fixed seed or a wall-clock seed only fails under the conditions it is meant to protect. That is why this tool reads the source and reports the pattern instead of waiting for a suite to notice.
+
 Randomness failures are quiet. A call to `random.getrandbits(128)` looks like it
 produces a large unpredictable number, and it does produce a large number. The
 problem is that `random` is a Mersenne Twister: after an observer collects a few
