@@ -10,6 +10,35 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Rule tables are being reorganised for the next patch.
 - The rule registry is being reviewed for the next minor.
 
+## [5.1.0] - 2026-07-25
+
+### Added
+
+- A `--summary` line printing only the per-class counts, for CI logs.
+
+## [4.0.0] - 2026-07-15
+
+### Changed
+
+- Findings are grouped by class; per-file detail moves behind `--per-file`.
+
+### Added
+
+- `--strict` turns low-confidence patterns into findings.
+
+## [3.1.0] - 2026-07-07
+
+### Added
+
+- A rule registry listing every rule with its rationale and example.
+
+## [2.2.0] - 2026-06-30
+
+### Added
+
+- The report carries a `rules` block naming the registry version.
+- Fixtures for the test-path exception on seeded generators.
+
 ## [1.0.1] - 2026-06-16
 
 ### Fixed
